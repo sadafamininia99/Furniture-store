@@ -2,8 +2,14 @@ import React from "react";
 
 function App(){
     return(
-        <div>
-            hi
+        <div className="conatainer"> 
+            <div className="row">
+                .<div className="col-md-12">
+                    <h1>
+                        shopping cart  
+                    </h1>
+                </div>
+            </div>
             </div>
     );
 }
