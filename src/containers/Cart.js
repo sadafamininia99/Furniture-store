@@ -1,9 +1,18 @@
 import React from 'react'
+import { getProducts } from './Product'
 
-function Cart() {
-  return (
-    <div>Cart</div>
-  )
+
+
+// /actions
+
+
+const Cart_Add = 'cart/ADD';
+const CART_REMOVE = "cart/remove"
+//
+
+// reducer
+
+const initislState = {
+  items: [],
+  currency: "EUR"
 }
-
-export default Cart
