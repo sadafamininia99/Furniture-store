@@ -1,4 +1,8 @@
 import React from "react";
+import Cart from "./containers/Cart";
+import ProductList from "./containers/ProductList";
+
+
 
 function App() {
     return (
@@ -11,10 +15,11 @@ function App() {
                 </div>
                 <div className="row">
                     <div className="col-md-8">
-                        {/* //component here */}
+                        <ProductList />
+
                     </div>
                     <div className="col-md-4">
-                        {/* //compnent  */}
+                        <Cart />
                     </div>
                 </div>
             </div>
