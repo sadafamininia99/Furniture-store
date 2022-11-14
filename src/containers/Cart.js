@@ -11,7 +11,8 @@ const Cart_Add = 'cart/ADD';
 const CART_REMOVE = "cart/remove"
 //
 
-// reducer
+// reducerrsss
+
 
 const initislState = {
   items: [],
@@ -41,7 +42,7 @@ function handelCartAdd(state, payload) {
   function CART_REMOVE(state, payload) {
     return {
       ...state,{
-      items: state.items.filter(id => id !==payload.productId)
+      items: state.items.filter(id => id !== payload.productId)
     }
   }
 
