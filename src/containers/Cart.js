@@ -46,4 +46,23 @@ function handelCartAdd(state, payload) {
     }
   }
 
-}
+  //action creatores
+  export function addToCart(productId) {
+    return {
+      type: Cart_ADD,
+      payload: {
+        productId
+      }
+    }
+
+  }
+
+
+  export function removeCart(productId) {
+    return {
+      type: CART_REMOVE,
+      payload: {
+        productId
+      }
+    }
+  }
