@@ -1,12 +1,16 @@
-export default function products(state = []) {
-    return state
+import { connect } from 'react-redux';
+import Product from '../components/Product';
+import { addToCart, removeFromCart, isInCart } from '../ducks/cart';
 
+const mapStateToProps = (state, props) => {
+    return {
+        isInCart: isInCart(state, props)
+    }
 }
 
-export function getProducts(state, props) {
-    return state.products;
-}
+const mapDispatchToProps = (dispatch) => ({
+    addToCart: (id) => dispatch(addToCart(id)),
+    removeFromCart: (id) => dispatch(removeFromCart(id))
+})
 
-export function getProducts(props, state) {
-    return state.products.find(item => item.id === props.id)
-}
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
